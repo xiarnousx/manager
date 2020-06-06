@@ -156,6 +156,37 @@ class _DealerSummaryScreenState extends State<DealerSummaryScreen> {
                           ),
                         ],
                       ),
+                      TableRow(
+                        children: [
+                          TableCell(
+                            child: Text(
+                              'Collect + Gain',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                                fontSize: 15,
+                              ),
+                            ),
+                          ),
+                          TableCell(
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                right: 16,
+                              ),
+                              child: Text(
+                                '\$' +
+                                    Formatter.formatMoney(summary.total_gain_collect),
+                                style: TextStyle(
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                ),
+                                textAlign: TextAlign.right,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),

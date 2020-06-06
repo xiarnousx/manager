@@ -325,6 +325,9 @@ class Transaction {
     tnxes.forEach((currentTnx) {
       summary.total_gain += Calculator.gain(currentTnx);
     });
+
+    summary.total_gain_collect =
+        summary.total_collect * Calculator.K + summary.total_gain;
     return summary;
   }
 }
